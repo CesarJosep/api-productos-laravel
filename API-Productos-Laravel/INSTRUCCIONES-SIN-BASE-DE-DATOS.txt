@@ -1,0 +1,36 @@
+PROYECTO LARAVEL SIN BASE DE DATOS
+
+Este proyecto no utiliza MySQL, SQLite ni Firebase para los productos.
+Los datos se guardan en storage/app/productos.json.
+
+INICIAR:
+1. Abre en VS Code la carpeta Laravel-Completo (la carpeta que contiene artisan).
+2. Abre la terminal en esa carpeta.
+3. Ejecuta:
+   php artisan optimize:clear
+   php artisan serve
+4. En Thunder Client usa http://127.0.0.1:8000/api/productos
+
+PRUEBAS:
+GET    http://127.0.0.1:8000/api/productos
+POST   http://127.0.0.1:8000/api/productos
+GET    http://127.0.0.1:8000/api/productos/1
+PUT    http://127.0.0.1:8000/api/productos/1
+DELETE http://127.0.0.1:8000/api/productos/1
+
+POST body JSON:
+{
+  "nombre": "Laptop Gamer",
+  "descripcion": "Laptop con 16GB RAM y 1TB SSD",
+  "precio": 1500.50,
+  "stock": 10
+}
+
+PUT body JSON:
+{
+  "precio": 1350,
+  "stock": 8
+}
+
+Importante: los registros se conservan en el archivo JSON aunque cierres el servidor.
+No ejecutes php artisan migrate: este proyecto no necesita migraciones.

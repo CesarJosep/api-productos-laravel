@@ -1,0 +1,62 @@
+[
+  {
+    "name": "GET - Listar productos",
+    "method": "GET",
+    "url": "http://127.0.0.1:8000/api/productos",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ]
+  },
+  {
+    "name": "POST - Crear producto",
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/api/productos",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"nombre\": \"Laptop Gamer\",\n  \"descripcion\": \"Laptop con 16GB RAM y 1TB SSD\",\n  \"precio\": 1500.5,\n  \"stock\": 10\n}"
+    }
+  },
+  {
+    "name": "PUT - Actualizar producto ID 1",
+    "method": "PUT",
+    "url": "http://127.0.0.1:8000/api/productos/1",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"precio\": 1350,\n  \"stock\": 8\n}"
+    }
+  },
+  {
+    "name": "DELETE - Eliminar producto ID 1",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:8000/api/productos/1",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ]
+  }
+]

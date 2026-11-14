@@ -1,0 +1,1 @@
+Guarda aquí capturas REALES de las pruebas GET, POST, PUT y DELETE después de ejecutarlas en Thunder Client.
